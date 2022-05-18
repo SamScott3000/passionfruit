@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background: #4248f0; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #4248f0; /* Gecko Browsers */
+}
+
+
 html,
 body {
   padding: 0;
@@ -19,7 +27,45 @@ a {
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 4.5rem; /* 72px */
-  line-height: 1;
+@media (min-width: 0px) {
+  h1 {
+    font-size: 1.25rem; /* 72px */
+    line-height: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem; /* 72px */
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.75rem; /* 72px */
+    line-height: 1;
+  }
+}
+@media (min-width: 0px) {
+  h4 {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h4 {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  h4 {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 1.5rem;
+  }
 }
