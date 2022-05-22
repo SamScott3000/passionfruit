@@ -11,7 +11,7 @@ function ProjectProse( props: any ) {
         variants={item}
         className='duration-200'
         >
-        <div className="flex mb-16">
+        <div className="flex mb-8">
             <p className="max-w-prose mx-auto">
               {props.children}
             </p>

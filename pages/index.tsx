@@ -7,9 +7,9 @@ import ProjectCard from "../components/cards/projectCard";
 const Projects: NextPage = () => {
   return (
     <div className="">
-       <div className="absolute right-12 bottom-8">Logos</div>
-        <div className="absolute right-12 top-8">Dark Mode</div>
-          <TitleCard />
+       {/*<div className="absolute right-12 bottom-8">Logos</div>
+        <div className="absolute right-12 top-8">Dark Mode</div>*/}
+  <TitleCard />
     </div>
   );
 };
