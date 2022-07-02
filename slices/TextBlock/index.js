@@ -3,10 +3,10 @@ import { PrismicRichText } from '@prismicio/react'
 
 const TextBlock = ({ slice }) => (
   <section>
-    <span className="title">
+    <span className="subHeading">
       {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
+        slice.primary.subHeading ?
+        <PrismicRichText field={slice.primary.subHeading}/>
         : <h2>Template slice, update me!</h2>
       }
     </span>
@@ -21,7 +21,7 @@ const TextBlock = ({ slice }) => (
           margin: 4em auto;
           text-align: center;
         }
-        .title {
+        .subHeading {
           color: #8592e0;
         }
     `}</style>
