@@ -5,8 +5,17 @@ import { PrismicRichText } from "@prismicio/react";
 
 import * as prismicH from "@prismicio/helpers";
 
-export async function getStaticPaths() {
-  const client = createClient();
+export default function LandingPage({ project }: any) {
+  return (
+    <Layout>
+      <h1>{ project?.uid }</h1>
+      <PrismicRichText field={project?.data?.slices?.primary} />
+    </Layout>
+  );
+}
+
+export async function getStaticPaths({ previewData }: any) {
+  const client = createClient({ previewData });
   const documents = await client.getAllByType("page");
   return {
     paths: documents.map((doc) => prismicH.asLink(doc, linkResolver)),
@@ -14,23 +23,13 @@ export async function getStaticPaths() {
   };
 }
 
-
-
-const LandingPage: NextPage = ({ project }: any) => {
-  return (
-    <Layout>
-      <h1>{project.uid}</h1>
-      <PrismicRichText field={project.data.slices.primary} />
-    </Layout>
-  );
-};
 export async function getStaticProps({ params, previewData }: any) {
-    const client = createClient({ previewData });
-    const uid = params.uid;
-  
-    const project = await client.getByUID("projects", uid);
-    return {
-      props: { project },
-    };
-  }
-export default LandingPage;
+  const client = createClient({ previewData });
+  const uid = params.uid;
+  console.log(uid)
+  const project = await client.getByUID("projects", uid);
+  console.log(project)
+  return {
+    props: { project },
+  };
+}
