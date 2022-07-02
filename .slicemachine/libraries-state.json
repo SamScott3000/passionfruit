@@ -1,23 +1,23 @@
 {
   "slices": {
     "components": {
-      "text_block": {
+      "image_caption": {
         "library": "slices",
-        "id": "text_block",
-        "name": "TextBlock",
-        "description": "TextBlock",
+        "id": "image_caption",
+        "name": "ImageCaption",
+        "description": "ImageCaption",
         "model": {
-          "id": "text_block",
+          "id": "image_caption",
           "type": "SharedSlice",
-          "name": "TextBlock",
-          "description": "TextBlock",
+          "name": "ImageCaption",
+          "description": "ImageCaption",
           "variations": [
             {
               "id": "default",
               "name": "Default",
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
-              "description": "TextBlock",
+              "description": "ImageCaption",
               "primary": {
                 "title": {
                   "type": "StructuredText",
@@ -45,20 +45,20 @@
           "default": {
             "variation": "default",
             "name": "Default",
-            "slice_type": "text_block",
+            "slice_type": "image_caption",
             "items": [],
             "primary": {
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Streamline enterprise e-markets",
+                  "text": "E-enable virtual portals",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Eiusmod et reprehenderit commodo nulla et sint exercitation officia.",
+                  "text": "Minim elit cupidatat esse.",
                   "spans": []
                 }
               ]
@@ -69,7 +69,90 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/samscott/passionfruit/.slicemachine/assets/slices/ImageCaption/default/preview.png",
+            "width": 800,
+            "height": 56
+          }
+        }
+      },
+      "text_block": {
+        "library": "slices",
+        "id": "text_block",
+        "name": "TextBlock",
+        "description": "TextBlock",
+        "model": {
+          "id": "text_block",
+          "type": "SharedSlice",
+          "name": "TextBlock",
+          "description": "TextBlock",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TextBlock",
+              "primary": {
+                "subHeading": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "SubHeading",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "text_block",
+            "items": [],
+            "primary": {
+              "subHeading": [
+                {
+                  "type": "heading1",
+                  "text": "Productize bleeding-edge functionalities",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Cupidatat dolore sint ut exercitation et eiusmod deserunt excepteur labore sint ullamco do dolor. Enim dolore anim adipisicing velit adipisicing consectetur. Cupidatat nisi non anim minim est quis ut.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/samscott/passionfruit/.slicemachine/assets/slices/TextBlock/default/preview.png",
+            "width": 800,
+            "height": 96
+          }
+        }
       },
       "text_image_right": {
         "library": "slices",

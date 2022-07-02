@@ -1,23 +1,22 @@
 {
-  "id": "text_block",
+  "id": "image_caption",
   "type": "SharedSlice",
-  "name": "TextBlock",
-  "description": "TextBlock",
+  "name": "ImageCaption",
+  "description": "ImageCaption",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "TextBlock",
+      "description": "ImageCaption",
       "primary": {
-        "subHeading": {
+        "title": {
           "type": "StructuredText",
           "config": {
-            "label": "SubHeading",
-            "placeholder": "This is where it all begins...",
-            "allowTargetBlank": true,
-            "single": "heading1"
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
           }
         },
         "description": {

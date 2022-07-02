@@ -1,9 +1,30 @@
 {
   "_cts": {
-    "blog-post": {}
+    "blog-post": {},
+    "projects": {
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "TextImageRight": {},
-    "TextBlock": {}
+    "TextBlock": {
+      "default": {
+        "primary": {
+          "subHeading": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Pasdf": {},
+    "ImageCaption": {}
   }
 }
