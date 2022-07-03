@@ -10,7 +10,7 @@ function ProjectBack(props: any) {
   };
   return (
     <div className="fixed hover:pointer z-10 group hover:text-gray-600">
-      <Link href="/projects"><button className='hover:pointer'><MdArrowBack className='z-50 inline-block group-hover:-translate-x-4 duration-200 pb-1'/>Projects</button></Link>
+      <Link href="/projects"><button className='bg-white pr-2 hover:pointer'><MdArrowBack className='z-50 inline-block group-hover:-translate-x-2 duration-200 pb-1'/>Projects</button></Link>
     </div>
   );
 }

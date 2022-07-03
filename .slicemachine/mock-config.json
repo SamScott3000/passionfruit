@@ -4,7 +4,13 @@
     "projects": {
       "title": {
         "config": {
-          "patternType": "PARAGRAPH",
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "subHeading": {
+        "config": {
+          "patternType": "HEADING",
           "blocks": 1
         }
       }
@@ -27,11 +33,22 @@
               "blocks": 1
             }
           }
-        }
+        },
+        "items": {}
       }
     },
     "Pasdf": {},
     "ImageCaption": {},
-    "SliceReal": {}
+    "SliceReal": {},
+    "ImageBlock": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Image": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

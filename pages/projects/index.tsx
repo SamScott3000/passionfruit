@@ -20,7 +20,7 @@ const LandingPage = ({ project }: any) => {
       <div className="fixed hover:pointer z-10 group hover:text-gray-600">
         <Link href="/">
           <button className="hover:pointer">
-            <MdArrowBack className="z-50 inline-block group-hover:-translate-x-4 duration-200 pb-1" />
+            <MdArrowBack className="z-50 inline-block group-hover:-translate-x-2 duration-200 pb-1" />
             Home
           </button>
         </Link>
