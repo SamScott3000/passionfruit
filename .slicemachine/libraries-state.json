@@ -1,6 +1,62 @@
 {
   "slices": {
     "components": {
+      "home_page_link": {
+        "library": "slices",
+        "id": "home_page_link",
+        "name": "HomePageLink",
+        "description": "HomePageLink",
+        "model": {
+          "id": "home_page_link",
+          "type": "SharedSlice",
+          "name": "HomePageLink",
+          "description": "HomePageLink",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HomePageLink",
+              "primary": {
+                "link": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": ""
+                  }
+                },
+                "linkText": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link Text",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "home_page_link",
+            "items": [],
+            "primary": {
+              "link": "transform front-end web services",
+              "linkText": "recontextualize synergistic deliverables"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "image": {
         "library": "slices",
         "id": "image",

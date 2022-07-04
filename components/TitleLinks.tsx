@@ -13,7 +13,6 @@ function TitleLinks(props: any) {
         className={` ${props.disabled === true && "hover:cursor-not-allowed hover:bg-gray-300"} ${props.disabled === false && "hover:cursor-pointer hover:bg-black"}  mr-8 group py-4 duration-200 hover:text-white`}
       >
         {props.words}
-        
         {props.disabled === !true &&
           <span className="duration-200 group-hover:ml-4">
           <MdArrowForward className='inline-block '/>

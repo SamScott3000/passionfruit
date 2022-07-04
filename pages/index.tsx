@@ -1,17 +1,27 @@
-import type { NextPage } from "next";
-import styles from "../styles/Home.module.css";
+import { PrismicRichText, PrismicLink } from "@prismicio/react";
+import { createClient, linkResolver } from "../prismicio";
 import Layout from "../components/layout";
-import TitleCard from "../components/cards/titleCard";
-import ProjectCard from "../components/cards/projectCard";
+import { SliceZone } from "@prismicio/react";
+import { components }from '../slices'
 
-const Projects: NextPage = () => {
+export default function Home({ homepage }: any) {
   return (
-    <div className="">
-       {/*<div className="absolute right-12 bottom-8">Logos</div>
-        <div className="absolute right-12 top-8">Dark Mode</div>*/}
-  <TitleCard />
-    </div>
+    <Layout>
+        <p className="italic font-serif">
+        <PrismicRichText
+          field={homepage?.data?.introduction}
+        />
+        </p>
+        <div className="h-12"/>
+      <SliceZone slices={homepage?.data?.slices} components={components} />
+    </Layout>
   );
-};
+}
 
-export default Projects;
+export async function getStaticProps({ params, previewData }: any) {
+  const client = createClient({ previewData });
+  const homepage = await client.getSingle("homepage");
+  return {
+    props: { homepage },
+  };
+}

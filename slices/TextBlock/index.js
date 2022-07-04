@@ -3,7 +3,19 @@ import { PrismicRichText } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 import Image from "next/image";
 import { PrismicLink } from "@prismicio/react";
+import { createClient, linkResolver } from "../../prismicio";
 
+const docResolver = (link) => {
+  if (link.link_type === 'Document') {
+    return linkResolver(link );
+  }
+
+  if (link.link_type === 'Any') {
+    return '';
+  }
+
+  return (link).url;
+};
 
 const components = {
   heading1: ({ children }) => <h1>{children}</h1>,
@@ -20,17 +32,6 @@ const components = {
   oListItem: ({ children }) => <li>{children}</li>,
   list: ({ children }) => <ul>{children}</ul>,
   oList: ({ children }) => <ol>{children}</ol>,
-  hyperlink: ({ node, children, key }) => {
-    const target = node.data.target
-      ? `target="{node.data.target}" rel="noopener"`
-      : "";
-    const url = linkResolver(node.data);
-    return (
-      <PrismicLink href={url} key={key}>
-        {children}
-      </PrismicLink>
-    );
-  },
   label: ({ node, children }) => {
     return <span className="{node.data.label}">{children}</span>;
   },
@@ -40,11 +41,11 @@ const components = {
 const TextBlock = ({ slice }) => (
   <section className="max-w-prose mx-auto">
         <PrismicRichText
-          field={slice.primary.subHeading}
+          field={slice?.primary?.subHeading}
           components={components}
         />
         <PrismicRichText
-          field={slice.primary.description}
+          field={slice?.primary?.description}
           components={components}
         />
   </section>

@@ -8,7 +8,6 @@ import { PrismicRichText } from "@prismicio/react";
 import ProjectBack from "../../components/ProjectComponents/ProjectBack";
 
 export default function LandingPage({ project }: any) {
-  console.log();
   return (
     <Layout>
       <ProjectBack />

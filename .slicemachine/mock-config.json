@@ -14,7 +14,8 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "homepage": {}
   },
   "slices": {
     "TextImageRight": {},
@@ -46,6 +47,11 @@
       }
     },
     "Image": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "HomePageLink": {
       "default": {
         "primary": {}
       }
