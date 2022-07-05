@@ -5,10 +5,10 @@ import { MdArrowForward } from "react-icons/md";
 const HomePageLink = ({ slice }) => (
   <section>
     <Link href={slice.primary.link}>
-      <div className="ml-8 lg:ml-16 duration-200 group w-[40vw] ">
-        <button className="text-left text-3xl md:text-5xl lg:text-7xl">
+      <div className="lg:mx-8 duration-200 group mb-8">
+        <button className="text-left text-3xl md:text-6xl">
         {slice.primary.linkText}<MdArrowForward className='duration-200 group-hover:ml-6 inline-block '/>
-          <div className="h-px bg-black mt-2"/>
+          <div className="h-px bg-black mb-2"/>
         </button>
       </div>
     </Link>

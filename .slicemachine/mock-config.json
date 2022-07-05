@@ -15,7 +15,8 @@
         }
       }
     },
-    "homepage": {}
+    "homepage": {},
+    "about": {}
   },
   "slices": {
     "TextImageRight": {},

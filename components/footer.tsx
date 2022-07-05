@@ -1,26 +1,40 @@
 import Layout from "./layout";
-import Link from 'next/link'
+import Link from "next/link";
+
+const navs = [
+  { id: 1, title: "Home", link: "/" },
+  { id: 2, title: "Projects", link: "/projects" },
+  { id: 3, title: "The Zone", link: "/zone" },
+  { id: 4, title: "About", link: "/about" },
+];
+
 function Footer(props: any) {
   return (
-    <footer className="bg-white pb-16">
-        <Layout>
-          <div className="h-px bg-gray-200 mb-12"/>
-          <div className="grid grid-cols-2 md:gap-12 gap-4">
-          <div className="">
-            <p className="text-black">Want to see more?</p>
+    <footer className="text-white bg-neutral-900 pb-8">
+      <Layout>
+        <div className="grid grid-cols-12">
+          <div className="col-span-6">
+            <p className="underline">More Work</p>
           </div>
-
-            <div className="flex flex-col">
-              <Link scroll={false} href='/'><p className="duration-200 hover:text-gray-600 hover:cursor-pointer">Home</p></Link>
-              <Link scroll={false} href='/projects'><p className="duration-200 hover:text-gray-600 hover:cursor-pointer">Work</p></Link>
-              <Link scroll={false} href='/blog'><p className="duration-200 hover:text-gray-600 hover:cursor-pointer">Blog</p></Link>
-              <Link scroll={false} href='/about'><p className="duration-200 hover:text-gray-600 hover:cursor-pointer">About</p></Link>
+          <div className="col-span-6">
+            <div className="flex flex-col items-start">
+              <p className="underline">Navigation</p>
+              {navs.map((x: any) => (
+                <Link key={x.id} scroll={false} href={x.link}>
+                  <p className="duration-200 hover:text-neutral-900 hover:cursor-pointer hover:bg-white duration-200 px-4">
+                    {x.title}
+                  </p>
+                </Link>
+              ))}
             </div>
-            <p></p>
           </div>
-        </Layout>
+          <div className="mt-8 ">
+            <p className="text-xs text-neutral-600">&copy; Sam Scott</p>
+          </div>
+        </div>
+      </Layout>
     </footer>
-  )
+  );
 }
 
 export default Footer;

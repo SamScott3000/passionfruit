@@ -2,17 +2,16 @@ import { PrismicRichText, PrismicLink } from "@prismicio/react";
 import { createClient, linkResolver } from "../prismicio";
 import Layout from "../components/layout";
 import { SliceZone } from "@prismicio/react";
-import { components }from '../slices'
+import { components } from "../slices";
 
 export default function Home({ homepage }: any) {
+  const x = {
+    paragraph: ({ children }: any) => <p className="font-serif italic">{children}</p>,
+  };
   return (
     <Layout>
-        <p className="italic font-serif">
-        <PrismicRichText
-          field={homepage?.data?.introduction}
-        />
-        </p>
-        <div className="h-12"/>
+      <PrismicRichText field={homepage?.data?.introduction} components={x} />
+      <div className="h-12" />
       <SliceZone slices={homepage?.data?.slices} components={components} />
     </Layout>
   );

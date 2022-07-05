@@ -1,0 +1,42 @@
+{
+  "id": "about",
+  "label": "About",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "link": {
+        "type": "Link",
+        "config": {
+          "label": "Link",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "geopoint": {
+        "type": "GeoPoint",
+        "config": {
+          "label": "Geopoint"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "text_block": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "522e648a-90ff-485d-b0ee-2a09381d426b",
+  "uid": "tempore-veniam-quos",
+  "type": "about",
+  "data": {
+    "link": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "geopoint": {
+      "latitude": 48.8583736,
+      "longitude": 2.2922926
+    }
+  }
+}
