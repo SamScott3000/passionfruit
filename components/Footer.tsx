@@ -28,7 +28,7 @@ function Footer(props: any) {
               ))}
             </div>
           </div>
-          <div className="mt-8 ">
+          <div className="mt-8 col-span-6">
             <p className="text-xs text-neutral-600">&copy; Sam Scott</p>
           </div>
         </div>

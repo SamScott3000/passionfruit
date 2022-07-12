@@ -6,6 +6,7 @@ import { Squeeze as HamburgerIcon } from "hamburger-react";
 export default function Menu(props: any) {
   const [isOpen, setIsOpen] = useState(false);
   const navs = [
+    { id: 1, title: "Home", link: "/" },
     { id: 2, title: "Projects", link: "/projects" },
     { id: 3, title: "The Zone", link: "/zone" },
     { id: 4, title: "About", link: "/about" },
@@ -22,7 +23,7 @@ export default function Menu(props: any) {
       </div>
       {isOpen ? (
         <div
-          className={`overscroll-none fixed w-full h-screen backdrop-invert backdrop-blur-xl z-40  top-0 right-0 shadow-lg`}
+          className={`overscroll-none fixed w-full h-screen backdrop-invert backdrop-blur-2xl z-40  top-0 right-0 shadow-lg`}
         >
           <div className="flex flex-col mt-28 mx-4 md:mx-16 lg:mx-24">
             <div className="h-px bg-white w-full" />

@@ -18,6 +18,15 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "imageDescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Image Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading5"
+          }
         }
       },
       "items": {},

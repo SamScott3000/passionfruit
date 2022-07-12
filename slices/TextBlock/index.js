@@ -4,50 +4,31 @@ import * as prismicH from "@prismicio/helpers";
 import Image from "next/image";
 import { PrismicLink } from "@prismicio/react";
 import { createClient, linkResolver } from "../../prismicio";
+import { FiArrowUpRight } from "react-icons/fi";
+import components from '../../components/richTextComponents'
 
 const docResolver = (link) => {
-  if (link.link_type === 'Document') {
-    return linkResolver(link );
+  if (link.link_type === "Document") {
+    return linkResolver(link);
   }
 
-  if (link.link_type === 'Any') {
-    return '';
+  if (link.link_type === "Any") {
+    return "";
   }
 
-  return (link).url;
-};
-
-const components = {
-  heading1: ({ children }) => <h1>{children}</h1>,
-  heading2: ({ children }) => <h2 className="font-bold my-8 indent-4">{children}</h2>,
-  heading3: ({ children }) => <h3 className="font-bold my-8 indent-4">{children}</h3>,
-  heading4: ({ children }) => <h4>{children}</h4>,
-  heading5: ({ children }) => <h5>{children}</h5>,
-  heading6: ({ children }) => <h6 className="font-bold my-8 indent-4">{children}</h6>,
-  paragraph: ({ children }) => <p className="my-8">{children}</p>,
-  preformatted: ({ node }) => <pre>{JSON.stringify(node.text)}</pre>, 
-  strong: ({ children }) => <strong>{children}</strong>,
-  em: ({ children }) => <em>{children}</em>,
-  listItem: ({ children }) => <li>{children}</li>,
-  oListItem: ({ children }) => <li>{children}</li>,
-  list: ({ children }) => <ul>{children}</ul>,
-  oList: ({ children }) => <ol>{children}</ol>,
-  label: ({ node, children }) => {
-    return <span className="{node.data.label}">{children}</span>;
-  },
-  span: ({ text }) => (text ? text : ""),
+  return link.url;
 };
 
 const TextBlock = ({ slice }) => (
-  <section className="max-w-prose mx-auto">
-        <PrismicRichText
-          field={slice?.primary?.subHeading}
-          components={components}
-        />
-        <PrismicRichText
-          field={slice?.primary?.description}
-          components={components}
-        />
+  <section className="max-w-prose mx-auto ">
+    <PrismicRichText
+      field={slice?.primary?.subHeading}
+      components={components}
+    />
+    <PrismicRichText
+      field={slice?.primary?.description}
+      components={components}
+    />
   </section>
 );
 

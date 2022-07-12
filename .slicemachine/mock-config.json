@@ -49,10 +49,22 @@
     },
     "Image": {
       "default": {
-        "primary": {}
+        "primary": {
+          "imageDescription": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "HomePageLink": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Code": {
       "default": {
         "primary": {}
       }

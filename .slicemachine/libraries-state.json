@@ -1,6 +1,54 @@
 {
   "slices": {
     "components": {
+      "code": {
+        "library": "slices",
+        "id": "code",
+        "name": "Code",
+        "description": "Code",
+        "model": {
+          "id": "code",
+          "type": "SharedSlice",
+          "name": "Code",
+          "description": "Code",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Code",
+              "primary": {
+                "code": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Code",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "code",
+            "items": [],
+            "primary": {
+              "code": "reintermediate 24/365 initiatives"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "home_page_link": {
         "library": "slices",
         "id": "home_page_link",
@@ -82,6 +130,15 @@
                     "constraint": {},
                     "thumbnails": []
                   }
+                },
+                "imageDescription": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Image Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading5"
+                  }
                 }
               },
               "items": {},
@@ -103,8 +160,15 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
-              }
+                "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
+              },
+              "imageDescription": [
+                {
+                  "type": "heading5",
+                  "text": "Engage web-enabled infomediaries",
+                  "spans": []
+                }
+              ]
             }
           }
         },
@@ -112,13 +176,7 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {
-          "default": {
-            "path": "/Users/samscott/passionfruit/.slicemachine/assets/slices/Image/default/preview.png",
-            "width": 800,
-            "height": 136
-          }
-        }
+        "screenshotPaths": {}
       },
       "image_caption": {
         "library": "slices",
