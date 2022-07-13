@@ -2,20 +2,20 @@
   {
     "variation": "default",
     "name": "Default",
-    "slice_type": "text_block",
+    "slice_type": "icons",
     "items": [],
     "primary": {
-      "subHeading": [
+      "title": [
         {
-          "type": "heading6",
-          "text": "Monetize compelling convergence",
+          "type": "heading1",
+          "text": "Reintermediate intuitive applications",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Amet commodo aute incididunt non.",
+          "text": "Culpa cillum fugiat veniam minim incididunt fugiat cupidatat qui dolore qui ullamco eu anim id.",
           "spans": []
         }
       ]

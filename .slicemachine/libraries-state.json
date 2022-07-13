@@ -105,6 +105,76 @@
         },
         "screenshotPaths": {}
       },
+      "icons": {
+        "library": "slices",
+        "id": "icons",
+        "name": "Icons",
+        "description": "Icons",
+        "model": {
+          "id": "icons",
+          "type": "SharedSlice",
+          "name": "Icons",
+          "description": "Icons",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Icons",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "icons",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Reintermediate intuitive applications",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Culpa cillum fugiat veniam minim incididunt fugiat cupidatat qui dolore qui ullamco eu anim id.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "image": {
         "library": "slices",
         "id": "image",
@@ -278,7 +348,7 @@
                     "label": "SubHeading",
                     "placeholder": "This is where it all begins...",
                     "allowTargetBlank": true,
-                    "single": "heading6"
+                    "single": "heading6,heading4"
                   }
                 },
                 "description": {
@@ -306,14 +376,14 @@
               "subHeading": [
                 {
                   "type": "heading6",
-                  "text": "Incentivize 24/7 content",
+                  "text": "Monetize compelling convergence",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Ipsum ex dolore Lorem velit occaecat.",
+                  "text": "Amet commodo aute incididunt non.",
                   "spans": []
                 }
               ]
@@ -324,13 +394,7 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {
-          "default": {
-            "path": "/Users/samscott/passionfruit/.slicemachine/assets/slices/TextBlock/default/preview.png",
-            "width": 800,
-            "height": 80
-          }
-        }
+        "screenshotPaths": {}
       }
     }
   }

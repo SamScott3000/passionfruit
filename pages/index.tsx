@@ -3,16 +3,34 @@ import { createClient, linkResolver } from "../prismicio";
 import Layout from "../components/layout";
 import { SliceZone } from "@prismicio/react";
 import { components } from "../slices";
+import { motion } from "framer-motion";
 
 export default function Home({ homepage }: any) {
   const x = {
-    paragraph: ({ children }: any) => <p className="font-serif italic">{children}</p>,
+    paragraph: ({ children }: any) => (
+      <p className="font-serif italic">{children}</p>
+    ),
   };
+
   return (
     <Layout>
-      <PrismicRichText field={homepage?.data?.introduction} components={x} />
+      <div className="w-60">
+        <PrismicRichText field={homepage?.data?.introduction} />
+      </div>
       <div className="h-12" />
-      <SliceZone slices={homepage?.data?.slices} components={components} />
+      <div className="flex flex-col flex-wrap">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <div className="">
+            <SliceZone
+              slices={homepage?.data?.slices}
+              components={components}
+            />
+          </div>
+        </motion.div>
+      </div>
     </Layout>
   );
 }

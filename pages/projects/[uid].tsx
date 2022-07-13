@@ -8,6 +8,8 @@ import { PrismicRichText } from "@prismicio/react";
 import ProjectBack from "../../components/ProjectComponents/ProjectBack";
 import Footer from "../../components/Footer";
 import Hamburger from "../../components/Hamburger";
+import { SiNextdotjs } from "react-icons/si";
+import icons from "../../components/icons";
 
 export default function LandingPage({ project }: any) {
   console.log(project?.data?.vimeoURLid);
@@ -20,16 +22,16 @@ export default function LandingPage({ project }: any) {
           <h2 className="text-5xl mt-36 font-light">
             <PrismicRichText field={project?.data?.title} />
           </h2>
-          <div className="flex mt-4 mb-8 items-center justify-between">
+          <div className="flex mt-4 mb-8 items-start justify-between">
             <h3 className="text-neutral-500 italic font-light">
               <PrismicRichText field={project?.data?.subHeading} />
             </h3>
-            <div className="flex items-center gap-4">
+            {/*<div className="flex items-center gap-4">
+              <div><SiNextdotjs className="w-6 h-6"/></div>
+              <div className="">{icons.NextJs}</div>
               <div className="rounded-full w-4 h-4 bg-black"></div>
               <div className="rounded-full w-4 h-4 bg-black"></div>
-              <div className="rounded-full w-4 h-4 bg-black"></div>
-              <div className="rounded-full w-4 h-4 bg-black"></div>
-            </div>
+            </div>*/}
           </div>
 
           {project?.data?.vimeoURLid !== undefined &&

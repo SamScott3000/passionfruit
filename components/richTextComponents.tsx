@@ -13,7 +13,7 @@ const richTextComponents = {
   heading3: ({ children }: any) => (
     <h3 className="font-bold my-8 indent-4">{children}</h3>
   ),
-  heading4: ({ children }: any) => <h4>{children}</h4>,
+  heading4: ({ children }: any) => <h4 className="italic font-serif">{children}</h4>,
   heading5: ({ children }: any) => <h5 className="mb-8 mt-4 text-neutral-500 font-light text-sm">{children}</h5>,
   heading6: ({ children }: any) => (
     <h6 className="font-bold my-8 indent-4">{children}</h6>

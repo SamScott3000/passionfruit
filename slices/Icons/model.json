@@ -1,32 +1,30 @@
 {
-  "id": "text_block",
+  "id": "icons",
   "type": "SharedSlice",
-  "name": "TextBlock",
-  "description": "TextBlock",
+  "name": "Icons",
+  "description": "Icons",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "TextBlock",
+      "description": "Icons",
       "primary": {
-        "subHeading": {
+        "title": {
           "type": "StructuredText",
           "config": {
-            "label": "SubHeading",
-            "placeholder": "This is where it all begins...",
-            "allowTargetBlank": true,
-            "single": "heading6,heading4"
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
           }
         },
         "description": {
           "type": "StructuredText",
           "config": {
+            "single": "paragraph",
             "label": "Description",
-            "placeholder": "A nice description of your feature",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "placeholder": "A nice description of your feature"
           }
         }
       },

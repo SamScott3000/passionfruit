@@ -4,9 +4,11 @@ import Link from "next/link";
 import { createClient, linkResolver } from "../../prismicio";
 import { SliceZone } from "@prismicio/react";
 import { components } from "../../slices";
-import { MdArrowBack } from "react-icons/md";
+import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import { PrismicText, PrismicRichText } from "@prismicio/react";
-import { BsTwitter } from "react-icons/bs";
+import { BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs";
+import { FaChess } from "react-icons/fa";
+import Hamburger from "../../components/Hamburger";
 
 export default function about({ about }: any) {
   const iconClass = "w-6 h-6 hover:text-neutral-500 duration-200 ";
@@ -16,9 +18,21 @@ export default function about({ about }: any) {
       icon: <BsTwitter className={iconClass} />,
       link: "https://twitter.com/SamScott3000",
     },
-    { id: 2, icon: <BsTwitter className={iconClass} />, link: "/" },
-    { id: 3, icon: <BsTwitter className={iconClass} />, link: "/" },
-    { id: 4, icon: <BsTwitter className={iconClass} />, link: "/" },
+    {
+      id: 2,
+      icon: <FaChess className={iconClass} />,
+      link: "https://www.chess.com/member/sonicturnip",
+    },
+    {
+      id: 3,
+      icon: <BsGithub className={iconClass} />,
+      link: "https://github.com/SamScott3000",
+    },
+    {
+      id: 3,
+      icon: <BsLinkedin className={iconClass} />,
+      link: "https://www.linkedin.com/in/sam-scott-9845a51b3/",
+    },
   ];
   return (
     <>
@@ -31,6 +45,7 @@ export default function about({ about }: any) {
             </button>
           </Link>
         </div>
+        <Hamburger/>
         <div className="flex lg:flex-row flex-col lg:gap-16 mt-24 gap-16">
           <div className="w-60">
             <div className="mb-8">
@@ -39,7 +54,15 @@ export default function about({ about }: any) {
             <div className="my-8">
               <PrismicRichText field={about?.data?.contact} />
             </div>
-            <div className="mb-8">{about?.data?.email}</div>
+            <div className="mb-8">
+              <a
+                className="hover:text-neutral-500 duration-200 group inline underline"
+                href="mailto:samoscarscott@gmail.com"
+              >
+                {about?.data?.email}
+                <MdArrowForward className="group-hover:ml-2 duration-200 inline" />
+              </a>
+            </div>
             <div className="flex gap-4">
               {icons.map((x: any) => (
                 <a
@@ -47,6 +70,7 @@ export default function about({ about }: any) {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={x.link}
+                  className='hover:-translate-y-1 duration-200'
                 >
                   <button className="">{x.icon}</button>
                 </a>
@@ -55,12 +79,6 @@ export default function about({ about }: any) {
           </div>
 
           <div className="max-w-prose">
-            <div className="mb-8">
-              <PrismicRichText field={about?.data?.aboutHeader} />
-            </div>
-            <div className="my-8">
-              <PrismicRichText field={about?.data?.about} />
-            </div>
             <div className="">
               <SliceZone slices={about?.data?.slices} components={components} />
             </div>
