@@ -12,18 +12,47 @@
           "placeholder": ""
         }
       },
-      "link": {
-        "type": "Link",
+      "contactHeader": {
+        "type": "StructuredText",
         "config": {
-          "label": "Link",
+          "label": "Contact Header",
           "placeholder": "",
-          "select": "media"
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
-      "geopoint": {
-        "type": "GeoPoint",
+      "contact": {
+        "type": "StructuredText",
         "config": {
-          "label": "Geopoint"
+          "label": "Contact",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "aboutHeader": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About Header",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "about": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "slices": {

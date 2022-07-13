@@ -11,7 +11,7 @@ const Image = ({ slice }) => (
         alt={slice?.primary?.image?.alt ?? ""}
         width={slice?.primary?.image?.dimensions?.width}
         height={slice?.primary?.image?.dimensions?.height}
-        className="my-8 rounded "
+        className="my-8 rounded"
         quality={100}
       />
     </div>
