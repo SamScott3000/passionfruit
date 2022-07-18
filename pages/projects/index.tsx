@@ -11,15 +11,11 @@ import Hamburger from "../../components/Hamburger";
 
 const components = {
   heading1: ({ children }: any) => <h1>{children}</h1>,
-  heading2: ({ children }: any) => <h2 className="lg:text-6xl">{children}</h2>,
+  heading2: ({ children }: any) => <h2 className="lg:text-6xl font-thin">{children}</h2>,
 };
 
 const LandingPage = ({ project }: any) => {
-  const item = {
-    hidden: { opacity: 0, y: -20 },
-    show: { opacity: 1, y: 0 },
-    transition: { type: "ease" },
-  };
+console.log(project)
 
   return (
     <Layout>

@@ -11,8 +11,7 @@ import Hamburger from "../../components/Hamburger";
 import { SiNextdotjs } from "react-icons/si";
 import icons from "../../components/icons";
 
-export default function LandingPage({ project }: any) {
-  console.log(project?.data?.vimeoURLid);
+export default function LandingPage({ project, footer }: any) {
   return (
     <>
       <Layout>
@@ -63,8 +62,9 @@ export default function LandingPage({ project }: any) {
           </div>
         </div>
         <SliceZone slices={project?.data?.slices} components={components} />
+        <Footer/>
       </Layout>
-      <Footer />
+      
     </>
   );
 }

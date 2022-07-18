@@ -1,6 +1,5 @@
-import Link from 'next/link'
-import { MdArrowBack} from "react-icons/md";
-
+import Link from "next/link";
+import { MdArrowBack } from "react-icons/md";
 
 function ProjectBack(props: any) {
   const item = {
@@ -10,7 +9,12 @@ function ProjectBack(props: any) {
   };
   return (
     <div className="fixed hover:pointer z-10 group hover:text-gray-600">
-      <Link href="/projects"><button className='pr-2 hover:pointer'><MdArrowBack className='z-50 inline-block group-hover:-translate-x-2 duration-200 pb-1'/>Projects</button></Link>
+      <Link href="/projects">
+        <button className="pr-2 hover:pointer">
+          <MdArrowBack className="z-50 inline-block group-hover:-translate-x-2 duration-200 pb-1" />
+          Projects
+        </button>
+      </Link>
     </div>
   );
 }
