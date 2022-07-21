@@ -1,7 +1,7 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 
-const TextImageRight = ({ slice }) => (
+const Icons = ({ slice }) => (
   <section>
     <span className="title">
       {
@@ -28,4 +28,4 @@ const TextImageRight = ({ slice }) => (
   </section>
 )
 
-export default TextImageRight
+export default Icons

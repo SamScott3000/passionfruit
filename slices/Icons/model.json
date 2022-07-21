@@ -1,15 +1,15 @@
 {
-  "id": "text_image_right",
+  "id": "icons",
   "type": "SharedSlice",
-  "name": "TextImageRight",
-  "description": "TextImageRight",
+  "name": "Icons",
+  "description": "Icons",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "TextImageRight",
+      "description": "Icons",
       "primary": {
         "title": {
           "type": "StructuredText",

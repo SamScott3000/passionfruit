@@ -9,7 +9,6 @@
   background: #4248f0; /* Gecko Browsers */
 }
 
-
 html,
 body {
   padding: 0;
@@ -52,20 +51,5 @@ a {
     font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     font-style: italic;
     font-size: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  h4 {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    font-style: italic;
-    font-size: 1.25rem;
-  }
-}
-@media (min-width: 1024px) {
-  h4 {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    font-style: italic;
-    font-size: 1.5rem;
   }
 }

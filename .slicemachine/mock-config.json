@@ -1,9 +1,81 @@
 {
   "_cts": {
-    "blog-post": {}
+    "blog-post": {},
+    "projects": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "subHeading": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "homepage": {},
+    "about": {
+      "about": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "TextImageRight": {},
-    "TextBlock": {}
+    "TextBlock": {
+      "default": {
+        "primary": {
+          "subHeading": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "Pasdf": {},
+    "ImageCaption": {},
+    "SliceReal": {},
+    "ImageBlock": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Image": {
+      "default": {
+        "primary": {
+          "imageDescription": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "HomePageLink": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Code": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Icons": {}
   }
 }

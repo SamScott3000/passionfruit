@@ -1,0 +1,40 @@
+{
+  "id": "78d3b7c4-7092-4937-96b0-aa64cd38188e",
+  "uid": "ut-distinctio-sed",
+  "type": "projects",
+  "data": {
+    "title": [
+      {
+        "type": "heading2",
+        "text": "Facilitate front-end web services",
+        "spans": []
+      }
+    ],
+    "subHeading": [
+      {
+        "type": "heading3",
+        "text": "Whiteboard synergistic infrastructures",
+        "spans": []
+      }
+    ],
+    "date": "2021-12-30",
+    "order": 7922,
+    "coverImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"
+    },
+    "vimeoURLid": "expedite intuitive infomediaries",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Eiusmod dolor magna voluptate adipisicing laboris. Qui nisi non reprehenderit reprehenderit non proident ipsum voluptate ipsum fugiat laboris aliqua eiusmod.",
+        "spans": []
+      }
+    ]
+  }
+}
