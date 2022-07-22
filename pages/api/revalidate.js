@@ -3,7 +3,6 @@ import * as prismicH from "@prismicio/helpers";
 
 // Import your app's Link Resolver (if your app uses one)
 import { linkResolver } from "../../prismicio";
-import { Request, Response } from 'express';
 /**
  * This API endpoint will be called by a Prismic webhook. The webhook
  * will send an object containing a list of added, updated, or deleted
@@ -17,10 +16,10 @@ export default async function handler(req, res) {
     if (req.body.secret !== process.env.PRISMIC_WEBHOOK_SECRET) {
       return res.status(401).json({ message: "Invalid token" });
     }
-
+  
     // If you have a `createClient()` function defined elsewhere in
     // your app, use that instead
-    const client = prismic.createClient("your-repo-name");
+    const client = prismic.createClient("passion-fruit");
 
     // Get a list of URLs for any new, updated, or deleted documents
     const documents = await client.getAllByIDs(req.body.documents);

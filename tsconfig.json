@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "prismicio.js", "pages/slice-simulator.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "prismicio.js", "pages/slice-simulator.jsx", "pages/api/revalidate.js"],
   "exclude": ["node_modules"]
 }
