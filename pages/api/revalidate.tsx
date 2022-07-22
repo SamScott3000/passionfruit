@@ -3,7 +3,7 @@ import * as prismicH from "@prismicio/helpers";
 
 // Import your app's Link Resolver (if your app uses one)
 import { linkResolver } from "../../prismicio";
-
+import { Request, Response } from 'express';
 /**
  * This API endpoint will be called by a Prismic webhook. The webhook
  * will send an object containing a list of added, updated, or deleted
@@ -11,7 +11,7 @@ import { linkResolver } from "../../prismicio";
  *
  * The Prismic webhook must send the correct secret.
  */
-export default async function handler({ req, res }: any) {
+export default async function handler(req: Request, res: Response) {
   if (req.body.type === "api-update" && req.body.documents.length > 0) {
     // Check for secret to confirm this is a valid request
     if (req.body.secret !== process.env.PRISMIC_WEBHOOK_SECRET) {
