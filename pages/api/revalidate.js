@@ -11,7 +11,7 @@ import { Request, Response } from 'express';
  *
  * The Prismic webhook must send the correct secret.
  */
-export default async function handler(req: Request, res: Response) {
+export default async function handler(req, res) {
   if (req.body.type === "api-update" && req.body.documents.length > 0) {
     // Check for secret to confirm this is a valid request
     if (req.body.secret !== process.env.PRISMIC_WEBHOOK_SECRET) {
