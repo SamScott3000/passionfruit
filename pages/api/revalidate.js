@@ -14,7 +14,9 @@ import { linkResolver } from "../../prismicio";
 export default async function handler(req, res) {
   if (req.body.type === "api-update" && req.body.documents.length > 0) {
     // Check for secret to confirm this is a valid request
-
+    if (req.body.secret !== process.env.PRISMIC_WEBHOOK_SECRET) {
+      return res.status(401).json({ message: 'Invalid token' })
+    }
     // If you have a `createClient()` function defined elsewhere in
     // your app, use that instead
     const client = prismic.createClient("passion-fruit");
@@ -24,11 +26,10 @@ export default async function handler(req, res) {
     const urls = documents.map((doc) => prismicH.asLink(doc, linkResolver));
     try {
       // Revalidate the URLs for those documents
-      res.revalidate(urls)
-      // await Promise.all(urls.map(async (url) => await res.revalidate(url)));
+      await Promise.all(urls.map(async (url) => await res.revalidate(url)));
       return res.json({ revalidated: true });
     } catch (err) {
-      // If there was an error, Next.js will continue to show
+      // Inpm f there was an error, Next.js will continue to show
       // the last successfully generated page
       return res.status(500).send("Error revalidating");
     }
