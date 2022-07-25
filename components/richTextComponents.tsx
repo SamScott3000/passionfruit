@@ -22,10 +22,10 @@ const richTextComponents = {
   preformatted: ({ node }: any) => <pre>{JSON.stringify(node.text)}</pre>,
   strong: ({ children }: any) => <strong>{children}</strong>,
   em: ({ children }: any) => <em>{children}</em>,
-  listItem: ({ children }: any) => <li>{children}</li>,
+  listItem: ({ children }: any) => <li className="my-4 ml-4 lg:mx-4">{children}</li>,
   oListItem: ({ children }: any) => <li className="my-4 ml-4 lg:mx-4">{children}</li>,
-  list: ({ children }: any) => <ul>{children}</ul>,
-  oList: ({ children }: any) => <ol className="list-decimal text-sm ">{children}</ol>,
+  list: ({ children }: any) => <ul className="list-disc text-sm">{children}</ul>,
+  oList: ({ children }: any) => <ol className="list-decimal text-sm">{children}</ol>,
   label: ({ node, children }: any) => {
     return <span className="{node.data.label}">{children}</span>;
   },
