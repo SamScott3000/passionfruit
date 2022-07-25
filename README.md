@@ -4,8 +4,8 @@ This is a [Next.js](https://nextjs.org/) project deployed on [`Vercel`](https://
 
 ## Features
 
-This site uses ISR (Incremental Static Regeneration), allowing for on the fly edits in Prismic to appear without a full site rebuild.
-
+- This site uses ISR (Incremental Static Regeneration), allowing for on the fly edits in Prismic to appear without a full site rebuild.
+- Implemented dynamic routing
 
 ## Getting Started 
 
