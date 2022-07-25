@@ -1,6 +1,6 @@
 # Passionfruit
 
-This is a [Next.js](https://nextjs.org/) project deployed on [`Vercel`](https://vercel.com/) with [`Prismic`](https://prismic.io/) integration.
+This is a [Next.js](https://nextjs.org/) project deployed on [Vercel](https://vercel.com/) with [Prismic](https://prismic.io/) integration.
 
 ## Features
 
