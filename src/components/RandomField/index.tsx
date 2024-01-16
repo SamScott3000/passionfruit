@@ -1,39 +1,49 @@
-// import { PixelateFilter } from "@pixi/filter-pixelate";
 import { Container, Stage, Text, useTick } from "@pixi/react";
 import { TextStyle } from "pixi.js";
 import React, { useEffect, useReducer, useRef, useState } from "react";
 import { PixelateFilter } from "@pixi/filter-pixelate";
 
-const reducer = (_: any, { data }) => data;
+const reducer = (_: any, { data }: { type: string; data: any }) => data;
 
 const MovingText = () => {
-  const [motion, update] = useReducer(reducer);
+  const [motion, update] = useReducer(reducer, {
+    data: { x: 0, y: 0, anchor: 0 },
+  });
+
   const iter = useRef(0);
 
   useTick((delta) => {
-    const i = (iter.current += 0.05 * delta);
+    const i = (iter.current += 0.01 * delta);
 
     update({
       type: "update",
       data: {
-        x: Math.sin(i) * 10,
-        y: Math.sin(i / 1.5) * 10,
-        anchor: Math.sin(i / 5),
+        x: Math.sin(i) * 300,
+        y: Math.sin(i / 1.5) * 300,
+        anchor: Math.sin(i / 2),
       },
     });
   });
 
+  const ref = useRef<Text>(null);
+
+  const y = ref.current?._bounds;
+
+  const str = `${Math.round(y?.minX || 0)}, ${Math.round(y?.minY || 0)}`;
+
   return (
     <Text
-      text="Hello World"
-      filters={[new PixelateFilter(5)]}
+      ref={ref}
+      filters={[new PixelateFilter(3)]}
+      text={str}
       {...motion}
       style={
         new TextStyle({
           align: "center",
           fontFamily: '"Source Sans Pro", Helvetica, sans-serif',
-          fontSize: 50,
-          fontWeight: "400",
+          fontSize: 48,
+          fontWeight: "300",
+
           fill: ["#ffffff"], // gradient
         })
       }
