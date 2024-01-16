@@ -1,6 +1,8 @@
+// import { PixelateFilter } from "@pixi/filter-pixelate";
 import { Container, Stage, Text, useTick } from "@pixi/react";
 import { TextStyle } from "pixi.js";
 import React, { useEffect, useReducer, useRef, useState } from "react";
+import { PixelateFilter } from "@pixi/filter-pixelate";
 
 const reducer = (_: any, { data }) => data;
 
@@ -14,9 +16,9 @@ const MovingText = () => {
     update({
       type: "update",
       data: {
-        x: Math.sin(i) * 100,
-        y: Math.sin(i / 1.5) * 100,
-        anchor: Math.sin(i / 2),
+        x: Math.sin(i) * 10,
+        y: Math.sin(i / 1.5) * 10,
+        anchor: Math.sin(i / 5),
       },
     });
   });
@@ -24,6 +26,7 @@ const MovingText = () => {
   return (
     <Text
       text="Hello World"
+      filters={[new PixelateFilter(5)]}
       {...motion}
       style={
         new TextStyle({
@@ -52,7 +55,6 @@ const Window = ({ numberOfSprites }: { numberOfSprites: number }) => {
           x: current.getBoundingClientRect().width,
           y: current.getBoundingClientRect().height,
         });
-        console.log(current.getBoundingClientRect());
       }
     };
 
@@ -72,20 +74,24 @@ const Window = ({ numberOfSprites }: { numberOfSprites: number }) => {
       <Stage
         width={size.x}
         height={size.y}
-        options={{ backgroundColor: "#222af5" }}
+        options={{
+          backgroundColor: "#222af5",
+        }}
       >
-        <Container x={size.x / 2} y={size.y / 2}>
-          {array.map((v) => (
-            <MovingText key={v} />
-          ))}
-        </Container>
+        <>
+          <Container x={size.x / 2} y={size.y / 2}>
+            {array.map((_v, i) => (
+              <MovingText key={i} />
+            ))}
+          </Container>
+        </>
       </Stage>
     </div>
   );
 };
 
 export const RandomField = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   return (
     <div className="flex flex-1 min-w-[40px] gap-4 bg-primary relative">
