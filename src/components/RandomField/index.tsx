@@ -3,12 +3,32 @@ import { TextStyle } from "pixi.js";
 import React, { useEffect, useReducer, useRef, useState } from "react";
 import { PixelateFilter } from "@pixi/filter-pixelate";
 
-const reducer = (_: any, { data }: { type: string; data: any }) => data;
+type ReducerState = {
+  x: number;
+  y: number;
+  anchor?: number;
+  rotation?: number;
+};
+
+type ReducerAction = {
+  type: "update";
+  data: ReducerState;
+};
+
+const reducer = (state: ReducerState, action: ReducerAction) => {
+  switch (action.type) {
+    case "update":
+      return {
+        ...state,
+        ...action.data,
+      };
+    default:
+      return state;
+  }
+};
 
 const MovingText = () => {
-  const [motion, update] = useReducer(reducer, {
-    data: { x: 0, y: 0, anchor: 0 },
-  });
+  const [motion, update] = useReducer(reducer, { x: 0, y: 0, anchor: 0 });
 
   const iter = useRef(0);
 
@@ -20,12 +40,13 @@ const MovingText = () => {
       data: {
         x: Math.sin(i) * 300,
         y: Math.sin(i / 1.5) * 300,
-        anchor: Math.sin(i / 2),
+        anchor: 0.5,
       },
     });
   });
 
-  const ref = useRef<Text>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const ref = useRef<any>(null);
 
   const y = ref.current?._bounds;
 
@@ -88,13 +109,11 @@ const Window = ({ numberOfSprites }: { numberOfSprites: number }) => {
           backgroundColor: "#222af5",
         }}
       >
-        <>
-          <Container x={size.x / 2} y={size.y / 2}>
-            {array.map((_v, i) => (
-              <MovingText key={i} />
-            ))}
-          </Container>
-        </>
+        <Container x={size.x / 2} y={size.y / 2}>
+          {array.map((_v, i) => (
+            <MovingText key={i} />
+          ))}
+        </Container>
       </Stage>
     </div>
   );
