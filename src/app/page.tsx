@@ -1,18 +1,34 @@
 "use client";
 
 import { RandomField } from "@/components/RandomField";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [dateString, setDateString] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDateString(new Date().toLocaleTimeString());
+    }, 1000);
+    return () => clearInterval(interval);
+  });
+
   return (
-    <main className="flex sm:flex-row flex-col gap-8 min-h-screen p-4">
-      <div className="max-w-[45ch] h-fit">
-        <h1 className="mb-8">Hi, I’m Sam Scott, I code and things.</h1>
-        <p>Currently working on some fun projects at Studio206.</p>
-        <p>
-          I’ve just published a little strip plot package because I couldn’t
-          find a nice way of doing this.
-        </p>
-        <p>I write, make moodboards and try to do a lot.</p>
+    <main className="flex flex-col gap-4 h-screen p-4">
+      <div className="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-12 gap-4">
+        <div className="col-span-3">
+          <h1>Sam Scott</h1>
+        </div>
+        <div className="col-span-3 underline">
+          <Link href="/writing">Writing</Link>
+        </div>
+        <div className="col-span-3">
+          <p>{dateString}</p>
+        </div>
+        <div className="col-span-3">
+          <p>Hello</p>
+        </div>
       </div>
       <RandomField />
     </main>

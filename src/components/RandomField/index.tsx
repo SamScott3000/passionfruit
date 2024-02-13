@@ -100,7 +100,7 @@ const Window = ({ numberOfSprites }: { numberOfSprites: number }) => {
   const array = new Array(numberOfSprites).fill(0);
 
   return (
-    <div className="w-full h-full flex" ref={containerRef}>
+    <div className="w-full flex-1 relative" ref={containerRef}>
       <Stage
         width={size.x}
         height={size.y}
@@ -122,15 +122,15 @@ export const RandomField = () => {
   const [count, setCount] = useState(1);
 
   return (
-    <div className="flex flex-1 min-w-[40px] gap-4 bg-primary relative">
-      <div className="flex absolute top-0 left-0 border-b border-r border-white text-white font-mono">
+    <div className="flex flex-col flex-1 min-w-[40px] gap-4 bg-primary relative">
+      <div className="flex absolute top-0 left-0 border-2 border-white text-white font-mono">
         <button
-          className="h-8 w-8"
+          className="h-8 w-8 font-bold"
           onClick={() => setCount((prev) => (prev += 1))}
         >
           +
         </button>
-        <div className="w-px bg-white"></div>
+        <div className="w-0.5 bg-white"></div>
         <button
           className="h-8 w-8"
           onClick={() => setCount((prev) => Math.max((prev -= 1), 0))}
