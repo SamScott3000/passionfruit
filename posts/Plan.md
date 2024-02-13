@@ -1,0 +1,7 @@
+This morning I saw these images:
+
+They're attractive, but feel like silence, dead on arrival. The space is attractive, well lit, considered, full but without clutter. It feels made for these images, like the images themselves create the space. The need to know how others live is so strong that the others now live in ways which fulfil that need. All is vanity etc. A cage gets built, once an object joins the ensemble it can be difficult to remove, it rudely demands attention in ways a more polite guest might not.
+
+I do not want this, I do not believe it will make me happy. It's a misunderstanding of space, making a room you spend 16 hours a day in as comforting as possible is the most futile of endeavours, you aren't meant to feel comfortable for this long in one space, day in day out. These objects serve to make you forget this but you shouldn't, it will sterilise you.
+
+The space that surrounds you makes you and your investment, both monetary and emotional, further tie you into the space. Is quitting caffeine an option once you spend $4000 on a coffee machine? Maybe, but it definitely makes it harder. These objects crystallise and strengthen existing habits, while also making you hyper aware of deviations from this new normal. Yes coffee might taste better when it's made from independently sourced beans in your La Marzocco than when it's from starbucks, but it simultaneously raises your expectations.

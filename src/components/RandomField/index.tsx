@@ -64,7 +64,6 @@ const MovingText = () => {
           fontFamily: '"Source Sans Pro", Helvetica, sans-serif',
           fontSize: 48,
           fontWeight: "300",
-
           fill: ["#ffffff"], // gradient
         })
       }

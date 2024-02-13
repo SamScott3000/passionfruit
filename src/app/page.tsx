@@ -4,7 +4,7 @@ import { RandomField } from "@/components/RandomField";
 
 export default function Home() {
   return (
-    <main className="flex sm:flex-row flex-col gap-8 min-h-screen p-4 text-sm font-light">
+    <main className="flex sm:flex-row flex-col gap-8 min-h-screen p-4">
       <div className="max-w-[45ch] h-fit">
         <h1 className="mb-8">Hi, I’m Sam Scott, I code and things.</h1>
         <p>Currently working on some fun projects at Studio206.</p>
